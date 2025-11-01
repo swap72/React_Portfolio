@@ -84,36 +84,36 @@ export default function Portfolio() {
   const skills = [
     {
       name: "Java",
-      logo: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+      logo: "/icons/Java.svg",
     },
     {
       name: "Spring Boot",
-      logo: "https://spring.io/img/projects/spring-boot.svg",
+      logo: "/icons/sb.svg",
     },
-    { name: "Go", logo: "https://go.dev/images/go-logo-blue.svg" },
+    { name: "Go", logo: "/icons/Go.svg" },
     {
       name: "Azure",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg",
+      logo: "/icons/Azure.svg",
     },
     {
       name: "C#",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/d/d2/C_Sharp_Logo_2023.svg",
+      logo: "/icons/CS.svg",
     },
     {
       name: "Node.js",
-      logo: "https://nodejs.org/static/logos/jsIconGreen.svg",
+      logo: "/icons/njs.svg",
     },
     {
       name: "React",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      logo: "/icons/react.svg",
     },
     {
       name: "C",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg",
+      logo: "/icons/C.svg",
     },
     {
       name: "Rust",
-      logo: "https://rust-lang.org/static/images/rust-logo-blk.svg",
+      logo: "/icons/rust.svg",
     },
   ];
 
