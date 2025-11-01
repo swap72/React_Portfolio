@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import {
   Menu,
@@ -120,213 +119,48 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white overflow-x-hidden relative">
-      {/* PCB Circuit Background */}
-      <div className="fixed inset-0 opacity-20 pointer-events-none">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-              <feMerge>
-                <feMergeNode in="coloredBlur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
+      {/* Optimized PCB Background */}
+      <div className="fixed inset-0 pointer-events-none bg-[url('/imgs/pcb.svg')] bg-repeat opacity-20"></div>
 
-            <pattern
-              id="pcb-pattern"
-              x="0"
-              y="0"
-              width="200"
-              height="200"
-              patternUnits="userSpaceOnUse"
-            >
-              <line
-                x1="0"
-                y1="50"
-                x2="200"
-                y2="50"
-                stroke="#4ade80"
-                strokeWidth="2"
-              />
-              <line
-                x1="0"
-                y1="100"
-                x2="200"
-                y2="100"
-                stroke="#4ade80"
-                strokeWidth="2"
-              />
-              <line
-                x1="0"
-                y1="150"
-                x2="200"
-                y2="150"
-                stroke="#4ade80"
-                strokeWidth="2"
-              />
-              <line
-                x1="50"
-                y1="0"
-                x2="50"
-                y2="200"
-                stroke="#4ade80"
-                strokeWidth="2"
-              />
-              <line
-                x1="100"
-                y1="0"
-                x2="100"
-                y2="200"
-                stroke="#4ade80"
-                strokeWidth="2"
-              />
-              <line
-                x1="150"
-                y1="0"
-                x2="150"
-                y2="200"
-                stroke="#4ade80"
-                strokeWidth="2"
-              />
-              <circle
-                cx="50"
-                cy="50"
-                r="4"
-                fill="#fbbf24"
-                filter="url(#glow)"
-                className="pcb-glow"
-              />
-              <circle
-                cx="150"
-                cy="50"
-                r="4"
-                fill="#fbbf24"
-                filter="url(#glow)"
-                className="pcb-glow"
-              />
-              <circle
-                cx="50"
-                cy="150"
-                r="4"
-                fill="#fbbf24"
-                filter="url(#glow)"
-                className="pcb-glow"
-              />
-              <circle
-                cx="150"
-                cy="150"
-                r="4"
-                fill="#fbbf24"
-                filter="url(#glow)"
-                className="pcb-glow"
-              />
-              <circle
-                cx="100"
-                cy="100"
-                r="5"
-                fill="#4ade80"
-                filter="url(#glow)"
-                className="pcb-glow-green"
-              />
-              <line
-                x1="50"
-                y1="50"
-                x2="100"
-                y2="100"
-                stroke="#4ade80"
-                strokeWidth="1.5"
-              />
-              <line
-                x1="100"
-                y1="100"
-                x2="150"
-                y2="150"
-                stroke="#4ade80"
-                strokeWidth="1.5"
-              />
-              <line
-                x1="150"
-                y1="50"
-                x2="100"
-                y2="100"
-                stroke="#4ade80"
-                strokeWidth="1.5"
-              />
-              <rect
-                x="48"
-                y="98"
-                width="4"
-                height="4"
-                fill="#fbbf24"
-                filter="url(#glow)"
-                className="pcb-glow"
-              />
-              <rect
-                x="98"
-                y="48"
-                width="4"
-                height="4"
-                fill="#fbbf24"
-                filter="url(#glow)"
-                className="pcb-glow"
-              />
-              <rect
-                x="148"
-                y="98"
-                width="4"
-                height="4"
-                fill="#fbbf24"
-                filter="url(#glow)"
-                className="pcb-glow"
-              />
-              <circle
-                cx="75"
-                cy="75"
-                r="2"
-                fill="none"
-                stroke="#4ade80"
-                strokeWidth="1"
-                filter="url(#glow)"
-                className="pcb-glow-green"
-              />
-              <circle
-                cx="125"
-                cy="125"
-                r="2"
-                fill="none"
-                stroke="#4ade80"
-                strokeWidth="1"
-                filter="url(#glow)"
-                className="pcb-glow-green"
-              />
-              <circle
-                cx="125"
-                cy="75"
-                r="2"
-                fill="none"
-                stroke="#4ade80"
-                strokeWidth="1"
-                filter="url(#glow)"
-                className="pcb-glow-green"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#pcb-pattern)" />
-        </svg>
-      </div>
+      {/* Optional soft glow overlay (for subtle animation) */}
+      <div className="fixed inset-0 bg-green-500/5 mix-blend-overlay animate-pulse pointer-events-none"></div>
+
+      {/* Glow pulse overlay */}
+      <div
+        className="fixed inset-0 pointer-events-none mix-blend-screen opacity-10 animate-glowPulse"
+        style={{
+          backgroundImage: `
+      radial-gradient(circle at 50px 50px, rgba(250,204,21,0.15) 0%, rgba(0,0,0,0) 20px),
+      radial-gradient(circle at 150px 50px, rgba(74,222,128,0.12) 0%, rgba(0,0,0,0) 20px),
+      radial-gradient(circle at 50px 150px, rgba(250,204,21,0.15) 0%, rgba(0,0,0,0) 20px),
+      radial-gradient(circle at 150px 150px, rgba(74,222,128,0.12) 0%, rgba(0,0,0,0) 20px),
+      radial-gradient(circle at 100px 100px, rgba(74,222,128,0.15) 0%, rgba(0,0,0,0) 30px)
+    `,
+          backgroundSize: "200px 200px",
+        }}
+      ></div>
 
       <style>{`
-        @keyframes neon-glow {
-          0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 4px #fbbf24) drop-shadow(0 0 8px #fbbf24); }
-          50% { opacity: 1; filter: drop-shadow(0 0 12px #fbbf24) drop-shadow(0 0 20px #fbbf24); }
-        }
-        @keyframes neon-glow-green {
-          0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 4px #4ade80) drop-shadow(0 0 8px #4ade80); }
-          50% { opacity: 1; filter: drop-shadow(0 0 12px #4ade80) drop-shadow(0 0 20px #4ade80); }
-        }
-        .pcb-glow { animation: neon-glow 1.5s ease-in-out infinite; }
-        .pcb-glow-green { animation: neon-glow-green 1.5s ease-in-out infinite; }
-      `}</style>
+  @keyframes neon-glow {
+    0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 4px #fbbf24) drop-shadow(0 0 8px #fbbf24); }
+    50% { opacity: 1; filter: drop-shadow(0 0 12px #fbbf24) drop-shadow(0 0 20px #fbbf24); }
+  }
+  @keyframes neon-glow-green {
+    0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 4px #4ade80) drop-shadow(0 0 8px #4ade80); }
+    50% { opacity: 1; filter: drop-shadow(0 0 12px #4ade80) drop-shadow(0 0 20px #4ade80); }
+  }
+  .pcb-glow { animation: neon-glow 1.5s ease-in-out infinite; }
+  .pcb-glow-green { animation: neon-glow-green 1.5s ease-in-out infinite; }
+
+  /* new: soft pulsing for all pads */
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.15; }
+    50%      { opacity: 0.4; }
+  }
+  .animate-glowPulse {
+    animation: glowPulse 1.2s ease-in-out infinite;
+  }
+`}</style>
 
       {/* Navigation */}
       <nav

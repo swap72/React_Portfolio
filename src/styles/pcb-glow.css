@@ -1,0 +1,33 @@
+/* === PCB Pad Glow Animation === */
+
+@keyframes glow-yellow {
+  0%, 100% {
+    filter: drop-shadow(0 0 1px rgba(250,204,21,0.25))
+            drop-shadow(0 0 2px rgba(250,204,21,0.15));
+  }
+  50% {
+    filter: drop-shadow(0 0 3px rgba(250,204,21,0.4))
+            drop-shadow(0 0 5px rgba(250,204,21,0.3));
+  }
+}
+
+@keyframes glow-green {
+  0%, 100% {
+    filter: drop-shadow(0 0 1px rgba(74,222,128,0.25))
+            drop-shadow(0 0 2px rgba(74,222,128,0.15));
+  }
+  50% {
+    filter: drop-shadow(0 0 3px rgba(74,222,128,0.4))
+            drop-shadow(0 0 5px rgba(74,222,128,0.3));
+  }
+}
+
+.pad-yellow {
+  animation: glow-yellow 3.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.pad-green {
+  animation: glow-green 4s ease-in-out infinite;
+  transform-origin: center;
+}
