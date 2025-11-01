@@ -256,7 +256,7 @@ export default function Portfolio() {
                 "0 0 8px rgba(74,222,128,0.8), 0 0 16px rgba(74,222,128,0.6), 0 0 24px rgba(250,204,21,0.3)",
             }}
           >
-            <strong>Develop • Deploy • Repeat ⚡</strong>
+            <strong>Develop • Deploy • Repeat 👨🏻‍💻</strong>
           </p>
 
           <div className="flex justify-center space-x-4">
