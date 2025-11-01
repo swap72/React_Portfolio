@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/6a9c6944fe8451dd397fe9d0763a4c88?family=OCR+A+Std" rel="stylesheet">
+    <title>Portfolio</title>
+    
+    <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  #root {
+    width: 100%;
+  }
+
+  /* === Neon Glow Animation for Skill Names === */
+  @keyframes neonGlow {
+    0%, 100% {
+      text-shadow:
+        0 0 5px rgba(190, 173, 58, 0.581),
+        0 0 10px rgba(158, 201, 57, 0.355),
+        0 0 20px rgba(207, 87, 109, 0.4),
+        0 0 30px rgba(0, 255, 170, 0.3);
+      color: #b6ffe4 !important;
+    }
+    50% {
+      text-shadow:
+        0 0 10px rgba(179, 255, 0, 0.9),
+        0 0 20px rgba(230, 150, 236, 0.8),
+        0 0 30px rgba(189, 222, 235, 0.7),
+        0 0 40px rgba(0, 255, 174, 0.6),
+        0 0 60px rgba(215, 166, 39, 0.5);
+      color: #e0fff3 !important;
+    }
+  }
+
+  .neon-skill {
+    animation: neonGlow 2s ease-in-out infinite;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+  }
+
+  .neon-skill:hover {
+    transform: scale(1.08);
+  }
+  
+</style>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
