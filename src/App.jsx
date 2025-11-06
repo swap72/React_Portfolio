@@ -318,7 +318,7 @@ export default function Portfolio() {
         source projects.
       </p>
       <p className="text-xl text-gray-300 leading-relaxed">
-        I am currently exploring systems programming, low level projects and zig language{' '}
+        I am currently exploring Systems Programming, Low-Level projects and Zig language{' '}
         <img src="/icons/zig.svg" alt="Zig" width="40" height="40" className="inline-block align-middle" />
       </p>
     </div>
