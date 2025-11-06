@@ -299,30 +299,7 @@ export default function Portfolio() {
   `}</style>
       </section>
 
-      /* {/* About Section */}
-      <section
-        id="about"
-        className="min-h-screen flex items-center justify-center px-4 py-20"
-      >
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            About Me
-          </h2>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
-            <p className="text-2xl text-gray-300 leading-relaxed mb-6">
-              Backend developer with a touch of front-end and GenAI experience.
-              Focused on building reliable, efficient systems.
-            </p>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              When I'm not coding, I explore new tech and contribute to open
-              source.
-            </p>
-          </div>
-        </div>
-      </section> */
-
-
-      {/* About Section */}
+{/* About Section */}
 <section
   id="about"
   className="min-h-screen flex items-center justify-center px-4 py-20"
@@ -336,9 +313,11 @@ export default function Portfolio() {
         Backend developer with a touch of front-end and GenAI experience.
         Focused on building reliable, efficient systems.
       </p>
-      <p className="text-xl text-gray-300 leading-relaxed flex items-center flex-wrap gap-2">
+      <p className="text-xl text-gray-300 leading-relaxed mb-4">
         When I'm not coding, I like to explore new technologies and contribute to open
         source projects.
+      </p>
+      <p className="text-xl text-gray-300 leading-relaxed flex items-center flex-wrap gap-2">
         I am currently exploring systems programming, low level projects and zig 
         <img src="/icons/zig.svg" alt="Zig" width="40" height="40" className="inline-block" />
       </p>
