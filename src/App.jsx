@@ -462,29 +462,43 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/10 py-8 relative">
-        <div className="max-w-7xl mx-auto px-4 text-center text-gray-400">
-          <p>&copy; 2025 Swapnil Mishra. All rights reserved.</p>
-        </div>
-        <div className="absolute bottom-4 right-4 bg-black/70 px-6 py-3 rounded-lg border-2 border-green-400/50 backdrop-blur-sm">
-          <div
-            className="text-green-400 text-2xl tracking-wider"
-            style={{
-              fontFamily: '"OCR A Std", monospace',
-              letterSpacing: "0.3em",
-            }}
-          >
-            {time}
-          </div>
-          <div
-            className="text-yellow-400 text-xs text-center mt-1 tracking-widest"
-            style={{ fontFamily: '"OCR A Std", monospace' }}
-          >
-            IST
-          </div>
-        </div>
-      </footer>
+      {/* Footer */}<footer className="border-t border-white/10 py-8 relative">
+  <div className="max-w-7xl mx-auto px-4 text-center text-gray-400">
+    <p>&copy; 2025 Swapnil Mishra. All rights reserved.</p>
+  </div>
+  
+  {/* Old Portfolio Link - Left Corner */}
+  <div className="absolute bottom-4 left-4 bg-black/70 px-4 py-2 rounded-lg border border-blue-400/30 backdrop-blur-sm">
+    <a 
+      href="https://swap72.github.io/portfolio"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-400 text-sm hover:text-blue-300 transition-colors flex items-center gap-2"
+    >
+      <span>📁</span>
+      <span>Old Portfolio</span>
+    </a>
+  </div>
+
+  {/* Clock - Right Corner */}
+  <div className="absolute bottom-4 right-4 bg-black/70 px-6 py-3 rounded-lg border-2 border-green-400/50 backdrop-blur-sm">
+    <div
+      className="text-green-400 text-2xl tracking-wider"
+      style={{
+        fontFamily: '"OCR A Std", monospace',
+        letterSpacing: "0.3em",
+      }}
+    >
+      {time}
+    </div>
+    <div
+      className="text-yellow-400 text-xs text-center mt-1 tracking-widest"
+      style={{ fontFamily: '"OCR A Std", monospace' }}
+    >
+      IST
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
